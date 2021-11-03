@@ -1,0 +1,386 @@
+@font-face {
+    font-family: 'Roboto Condensed';
+    src:
+    url('./fonts/RobotoCondensed-Bold.ttf'),
+    url('./fonts/RobotoCondensed-BoldItalic.ttf'),
+    url('./fonts/RobotoCondensed-Italic.ttf'),
+    url('./fonts/RobotoCondensed-LightItalic.ttf'),
+    url('./fonts/RobotoCondensed-Regular.ttf');
+    
+}
+@font-face{
+    font-family: 'Roboto Condensed Light';
+    src: url('./fonts/roboto-condensed-light.woff.ttf');
+}
+@font-face {
+    font-family:'Great Vives';
+    src: url('./fonts/GreatVibes-Regular.ttf');
+    
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/*etiquetas*/
+
+/* todo HEADER */
+.header{
+    font-family: 'Roboto Condensed';
+    background: url("img/violenciainfantil.jpg"); 
+    background-size: 100% 100%;
+    height:41rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+}
+
+.subtitle,.title, .paz{
+    color: #fff;
+}
+
+.title{
+    background: linear-gradient(#ff0000, #ff17A2);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    color: #ff17A2;
+    font-size:6rem;
+    -webkit-text-stroke: .5px rgb(34, 2, 2);
+    
+}
+.subtitle{
+    font-size:2.5rem;
+}
+.paz{
+    letter-spacing: 0.5rem;
+    font-size: 1.5rem;
+}
+.how-do-denunciation {
+    display: grid;
+    row-gap: 1rem;
+    grid-auto-flow:row;
+    margin-top: 2rem;
+}
+.how-do-denunciation h4{
+    color: #ff47b2;
+    font-size: 2rem;
+    justify-self: end;
+    margin-right: 3rem;
+}
+#anonima, #condatos, #socorro{
+    justify-self: center;
+    color: #fff;
+    text-align: center;
+    margin-left: 50rem;
+    font-size: 1.2rem;
+}
+
+#anonima:hover, #condatos:hover, #socorro:hover{
+    border-bottom: 3px solid #FF17A2;
+    color: #FF17A2;
+    text-shadow: 3px 3px 3px rgb(#fff,#fff ,#fff,0.3);
+}
+
+/*! responsive */
+@media screen and (max-width:1000px) {
+    .title{
+        font-size:5rem;
+    }    
+    .subtitle{
+        font-size: 2rem;
+    }
+    .paz{
+        font-size: 1rem;
+    }
+    .how-do-denunciation h4{
+        font-size: 1.7rem;
+        justify-self: center;
+    }
+    #anonima, #condatos, #socorro{
+        font-size: 1.1rem;
+        margin-left: 2rem;
+    }
+}
+@media screen and (max-width:700px) {
+    .title{
+        font-size:3.5rem;
+    }    
+    .subtitle{
+        font-size: 1.5rem;
+    }
+    .paz{
+        font-size: .8rem;
+    }
+    .how-do-denunciation h4{
+        font-size: 1.5rem;
+        justify-self: center;
+    }
+    #anonima, #condatos, #socorro{
+        font-size: 1rem;
+        margin-left: 2rem;
+    }
+}
+
+.principal{
+    display: none;
+    font-family: 'Roboto Condensed';
+}
+
+/* todo DENUNCIA REGISTRANDO DATOS*/
+
+#denuncia-con-datos{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+#registro{
+    display: flex;
+    justify-content: center;
+}
+#denuncia{align-self: center;}
+
+/*  todo Formulario de registro */
+
+.datos h4{
+    color:#FF17A2;
+    text-align: center;
+    padding: 1rem;
+}
+.datos fieldset{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border: dotted 1px #FF17A2;
+    padding: 1rem 2rem;
+    align-items: space-around;
+    width: 5rem;
+}
+.datos fieldset legend{
+    text-align: left;
+    color: #fff;
+    padding:.5rem;
+    background-color: #FF17A2;
+}
+
+.datos fieldset label{
+    font-size: 0.8rem;
+    font-family: 'Roboto Condensed Light';
+    font-weight: bold;
+    color: #FF17A2;
+    padding: 0.3rem;
+}
+
+
+fieldset>input, select{
+    border: solid 1px #0000003b;
+    border-radius: 5px;
+    height: 35px;
+    text-align: center;
+}
+
+select {
+    color: #0000009f;
+}
+
+option[value=""][disabled] {
+    display: none;
+}
+
+option {
+    color:rgb(22, 21, 21);
+}
+
+.botones-cif-descif{
+    display: flex;
+    justify-content: center;
+    border:none;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.botones-cif-descif pre{
+    font-family: 'Roboto Condensed';
+    color: #FF17A2;
+    text-align: center;
+}
+
+#btn-encrypt,#btn-descifrar,#btn-limpiar,#btn-sig,#btn-inicio{
+    background-color: transparent;
+    font-size: 0.8rem;
+    border: none;
+    color: #FF17A2;
+    padding: 0px 20px;
+} 
+#btn-inicio img,#btn-encrypt img,#btn-descifrar img, #btn-limpiar img, #btn-sig img {
+    width: 40px;
+    height: 40px;
+}
+
+
+/* todo ACORDEON DE INSTRUCCIONES Y EXPLICACIÓN DEL CIFRADO CÉSAR */
+.acordeon{
+    align-self: center;
+}
+.exp{
+    background-color: #FF17A2;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    text-align:center;
+    outline: none;
+    color: #fff;
+    font-family: 'Roboto Condensed';
+    transition: 0.4s;
+}
+.active, .exp:hover {
+    background-color: #ccc;
+    color: #000000;
+}
+.exp:after {
+    content: '\002B';
+    color:#fff;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+
+}
+
+.active:after {
+    content: "\2212";
+    color: #000;
+}
+
+.panel {
+    padding: 0 1rem;
+    background-color:transparent;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.panel ol{
+    font-family: 'Roboto Condensed Light';
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 1rem;
+}
+
+li::marker{
+    color: #FF17A2;
+}
+
+/* todo MODAL */
+.modal-offset{
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: none;
+}
+
+/* Modal Content */
+.modal-content{
+    border-radius: 6px;
+    width: 90%;
+    background-color: #fff;
+    margin: auto;
+    max-width: 350px;
+    max-height: 90%;
+    pointer-events: unset;
+    
+}
+.modal-header{
+    font-family: 'Roboto Condensed';
+    background-color: #1877f2;
+    color: #fff;
+    border-radius: 6px 6px 0 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.close{
+    align-self:center;
+}
+
+.modal-body{
+    padding-bottom: 10px;
+}
+.description{
+    font-family: 'Roboto Condensed';
+}
+#explicacion{
+    display: grid;
+    place-items: center;
+    grid-auto-columns: 100%;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+}
+#explicacion img{
+    width: 140px;
+    height: 140px;
+}
+#exp-offset{
+    padding: 10px 20px;
+    text-align: justify;
+    font-size: 13px;
+    font-family: 'Roboto Condensed Light';
+}
+#inputoffset{
+    margin: 10px;
+}
+#offset{
+    border: 1px solid #a1a1a1;
+    border-radius: 6PX;
+    padding: 10px;
+    width: 150px;
+    background-color: #fff;
+}
+
+.mensaje-offset{
+    font-size: 12px;
+    text-align: left;
+    
+}
+
+.modal-footer{
+    padding: 1em;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    gap: 20px;
+    border-top:1px solid #929292;
+    
+}
+#guardaroffset{
+    background-color: #1877f2;
+}
+#cancelar{
+    background-color:#f26250;
+}
+#limpiaroffset{
+    background-color: #008080;
+}
+#cancelar, #guardaroffset,#limpiaroffset{
+    color: #fff;
+    padding: 0.5em;
+    border: 1px solid;
+    border-radius: 6px;
+    transition: background-color .3s;
+    align-self: center;
+    width: 100%;
+}
+#guardaroffset:hover{
+    background-color: #fff;
+    color:#1877f2;
+}
+#cancelar:hover{
+    background-color: #fff;
+    color: #f26250;
+}

@@ -1,14 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+  
   <head>
-    <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Algoritmo Cipher</title>
+    <link rel="stylesheet" href="style.css">
+
   </head>
   <body>
-    <div id="root">
-      <h1>Hello world!</h1>
-    </div>
+    <!-- header -->
+    <header class="header">
+      <!-- titulos  -->
+      <section class="frases">
+        <p class="subtitle">Evita callar, cuando seas testigo o sufras cualquier tipo de violencia.</p>
+        <h1 class="title">¡DENUNCIA, VIVE Y SÉ FELIZ!</h1>
+        <h4 class="paz">No hay camino para la paz, la paz es el camino.</h4>
+      </section>
+      <!-- como desea realzar la denuncia -->
+      <section class="how-do-denunciation">
+        <h4>¿Cómo deseas realizar la denuncia?</h4>
+        <a id="anonima">Anónima</a>
+        <a id="condatos">Con Datos</a>
+        <a id="socorro">SOS</a>
+      </section>
+    </header>
+    <main class="principal">
+      <!-- denuncia  con registro de datos-->
+      <section id="denuncia-con-datos">
+        <article id="registro">
+          <section class="acordeon">
+            <button class="exp">INSTRUCCIONES</button>
+            <div class="panel">
+              <ol>
+                <li>Registra tus datos</li>
+                <li>Clic en el botón cifrar</li>
+                <li>Ingresa el número del desplazamiento.</li>
+                <li>Clic en el botón guardar.</li>
+                <li>Clic en el botón descifrar.</li>
+                <li>Clic en el botón siguiente.</li>
+              </ol>
+            </div>
+          </section>
+          <form class="datos">
+            <h4>REGISTRA TUS DATOS</h4>
+            <fieldset>
+              <legend>Datos personales del denunciante</legend>
+              <label for="">Nombres</label>
+              <input class="data" type="text" id="name" placeholder="Ingrese sus nombres"/>
+              <label for="">Apellido Paterno</label>
+              <input class="data" type="text" id="lastnamepat" placeholder="Ingrese su apellido paterno"/>
+              <label for="">Apellido Materno</label>
+              <input class="data" type="text" id="lastnamemat" placeholder="Ingrese su apellido materno"/>
+              <label for="">Documento Nacional de Identidad</label>
+              <input class="data" type="number" id="numdoc" placeholder="Ingrese su DNI">
+              <label for="">Telefono</label>
+              <input class="data" type="tel" id="phone" placeholder="Ingrese teléfono fijo o celular"/>
+              <label for="">Correo electrónico</label>
+              <input class="data" type="email" name="email" id="email" placeholder="usuario@gmail.com">
+
+              <div class="botones-cif-descif">
+                <a id="btn-inicio" ><img src="img/inicio.png" alt="btninicio" > 
+                  <br><pre>Inicio</pre>
+                </a>
+                <a id="btn-encrypt" ><img src="img/cifrar.png" alt="btncifrar" > 
+                  <br><pre>Cifrar</pre>
+                </a>
+                <a id="btn-descifrar"><img src="img/descifrar.png" alt="btndescifrar"> 
+                  <br><pre>Descifrar</pre>
+                </a>
+                <a id="btn-limpiar"><img src="img/limpiar.png" alt="btnlimpiar"> 
+                  <br><pre>Limpiar</pre>
+                </a>
+                
+              </div>
+            </fieldset>
+          </form>
+        </article>
+        <section class="modal-offset">
+          <div class="modal-content">
+            <div class="modal-header" >
+              <h3>Desplazamiento</h3>
+              <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+              <p id="exp-offset">
+                Por ejemplo, con un desplazamiento de 3, la A sería sustituida por
+                la D (situada 3 lugares a la derecha de la A),
+              </p>
+              <div id="explicacion">
+                <img src="./img/algcesar.png" alt="cifradocesar" >
+                <div id="inputoffset">
+                  <h5 class="description">Número de desplazamiento</h5>
+                  <input type="number" placeholder="Ingrese su clave" id="offset"/>
+                  <p class="mensaje-offset"></p>
+                </div>
+              </div>
+              
+            </div>
+            <div class="modal-footer">
+              <button id="guardaroffset" >Guardar</button>
+              <button id="limpiaroffset">Limpiar</button>
+              <button id="cancelar">Cerrar</button>
+            </div>
+          </div>
+        </section>
+        <section id="denuncia">
+          <h3>hola</h3>
+        </section>
+      </section>
+      
+    </main>
+
     <script src="index.js" type="module"></script>
   </body>
 </html>
