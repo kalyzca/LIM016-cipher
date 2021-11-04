@@ -113,36 +113,32 @@ document.querySelector("#guardaroffset").addEventListener("click",()=>{
 //*? evento cuando doy click en boton desencrypt
 
 btndesencrypt.addEventListener("click", ()=> {
-  document.getElementsByClassName("modal-offset")[0].style.display="block";
-
-  document.getElementById("guardaroffset").addEventListener("click",()=>{
-    let des = document.getElementById("offset").value="";
-    console.log(des)
+  
+  document.getElementById("btn-descifrar").addEventListener("click",()=>{
+    let des = document.getElementById("numoffset").value;
+    des=(Number(des));
+    // console.log(des)
     
-    
-    if (des!=0) {
+    if (des>0) {
     //obteniendo valores de los input
-    let nombresdes=document.getElementById("name").value;
-    
-    // let apellidoPaterno= document.getElementById("lastnamepat").value;
-    // let apellidoMaterno= document.getElementById("lastnamemat").value;
-    // let dni=document.getElementById("numdoc").value;
+    let nombresDes=document.getElementById("name").value;
+    let apellidoPaternoDes= document.getElementById("lastnamepat").value;
+    let apellidoMaternoDes= document.getElementById("lastnamemat").value;
+    let dniDes=document.getElementById("numdoc").value;
     // let telefono=document.getElementById("phone").value;
     // let correo=document.getElementById("email").value;
-    document.getElementById("name").innerHTML=cipher.decode(des,nombresdes)
+    document.getElementById("name").value=cipher.decode(des,nombresDes);
+    document.getElementById("lastnamepat").value= cipher.decode(des,apellidoPaternoDes);
+    document.getElementById("lastnamemat").value= cipher.decode(des,apellidoMaternoDes);
+    document.getElementById("numdoc").value=cipher.decode(des,dniDes);
+  
   }
-  else{
-    offsetMessage.innerHTML="Ingrese un número diferente de cero."
-    offsetMessage.style.color="#ff0000";
-    document.getElementById("offset").style.border="solid 1px #ff0000";
-  }
+  
   });
-
- 
 
 })
     
     
     // eslint-disable-next-line no-undef
-    console.log(cipher);
-  
+    // console.log(cipher);
+    // console.log(cipher.decode("hola"));

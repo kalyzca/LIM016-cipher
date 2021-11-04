@@ -224,7 +224,11 @@ option {
 
 /* todo ACORDEON DE INSTRUCCIONES Y EXPLICACIÓN DEL CIFRADO CÉSAR */
 .acordeon{
-    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:2rem;
 }
 .exp{
     background-color: #FF17A2;
@@ -236,6 +240,8 @@ option {
     color: #fff;
     font-family: 'Roboto Condensed';
     transition: 0.4s;
+    width: 90%;
+    align-self: center;
 }
 .active, .exp:hover {
     background-color: #ccc;
@@ -273,6 +279,20 @@ option {
 li::marker{
     color: #FF17A2;
 }
+
+/* todo CAJA DE OFFSET*/
+.desplazamiento{
+    align-self: center;
+    margin: 1rem 0;
+    font-family: 'Roboto Condensed Light';
+    font-weight: bold;
+    font-size: 0.9rem;
+    border: dotted 1px #FF17A2;
+    border-radius: 6px;
+    padding: 1rem 1.5rem;
+    width: 240px;
+}
+
 
 /* todo MODAL */
 .modal-offset{
