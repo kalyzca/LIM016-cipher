@@ -131,21 +131,46 @@
     font-family: 'Roboto Condensed';
 }
 
+/* todo MENU DE NAVEGACIÓN */
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.menu li {
+    list-style: none;
+}
+
+#btn-inicio, #btn-denunciacd{
+    width: 40px;
+    height: 40px;
+}
+
+.titulo-denuncia-con-datos{
+    text-align: center;
+    color: #FF17A2;
+    padding: 1rem;
+}
 /* todo DENUNCIA REGISTRANDO DATOS*/
 
-#denuncia-con-datos{
+.denuncia-con-datos{
     background-color: #fff;
-    display: flex;
-    flex-direction: column;
 }
+
 #registro{
-    display: flex;
-    justify-content: center;
+    display:grid;
 }
-#denuncia{align-self: center;}
+
+.register-datos{
+    display: flex;
+    flex-direction: row ;
+}
 
 /*  todo Formulario de registro */
-
+/* .datos{
+    
+} */
 .datos h4{
     color:#FF17A2;
     text-align: center;
@@ -154,20 +179,19 @@
 .datos fieldset{
     display: flex;
     flex-direction: column;
-    border-radius: 5px;
+    border-radius: 6px;
     border: dotted 1px #FF17A2;
-    padding: 1rem 2rem;
-    align-items: space-around;
-    width: 5rem;
+    padding: 0.5rem 2rem;
 }
-.datos fieldset legend{
+.datos fieldset legend, .registro-denuncia legend{
     text-align: left;
     color: #fff;
     padding:.5rem;
     background-color: #FF17A2;
+    font-size: 0.9rem;
 }
 
-.datos fieldset label{
+.datos fieldset label, .registro-denuncia label{
     font-size: 0.8rem;
     font-family: 'Roboto Condensed Light';
     font-weight: bold;
@@ -176,7 +200,7 @@
 }
 
 
-fieldset>input, select{
+.datos fieldset>input, select{
     border: solid 1px #0000003b;
     border-radius: 5px;
     height: 35px;
@@ -209,14 +233,14 @@ option {
     text-align: center;
 }
 
-#btn-encrypt,#btn-descifrar,#btn-limpiar,#btn-sig,#btn-inicio{
+#btn-encrypt,#btn-descifrar,#btn-limpiar{
     background-color: transparent;
     font-size: 0.8rem;
     border: none;
     color: #FF17A2;
     padding: 0px 20px;
 } 
-#btn-inicio img,#btn-encrypt img,#btn-descifrar img, #btn-limpiar img, #btn-sig img {
+#btn-encrypt img,#btn-descifrar img, #btn-limpiar img{
     width: 40px;
     height: 40px;
 }
@@ -224,24 +248,22 @@ option {
 
 /* todo ACORDEON DE INSTRUCCIONES Y EXPLICACIÓN DEL CIFRADO CÉSAR */
 .acordeon{
+    width: 330px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin:2rem;
+    justify-content: space-between;
+    
 }
 .exp{
+    margin-top: 70px;
+    justify-self: center;
     background-color: #FF17A2;
-    padding: 10px;
-    cursor: pointer;
+    padding: 0.8rem;
     border: none;
     text-align:center;
-    outline: none;
     color: #fff;
     font-family: 'Roboto Condensed';
     transition: 0.4s;
-    width: 90%;
-    align-self: center;
 }
 .active, .exp:hover {
     background-color: #ccc;
@@ -251,9 +273,7 @@ option {
     content: '\002B';
     color:#fff;
     font-weight: bold;
-    float: right;
     margin-left: 5px;
-
 }
 
 .active:after {
@@ -282,125 +302,163 @@ li::marker{
 
 /* todo CAJA DE OFFSET*/
 .desplazamiento{
-    align-self: center;
-    margin: 1rem 0;
-    font-family: 'Roboto Condensed Light';
-    font-weight: bold;
-    font-size: 0.9rem;
     border: dotted 1px #FF17A2;
     border-radius: 6px;
-    padding: 1rem 1.5rem;
-    width: 240px;
-}
-
-
-/* todo MODAL */
-.modal-offset{
-    position:fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #111111bd;
-    display: none;
-}
-
-/* Modal Content */
-.modal-content{
-    border-radius: 6px;
-    width: 90%;
     background-color: #fff;
-    margin: auto;
-    max-width: 350px;
-    max-height: 90%;
-    pointer-events: unset;
+    margin-top: 1rem;
     
 }
-.modal-header{
-    font-family: 'Roboto Condensed';
-    background-color: #1877f2;
+.titulo{
+    background-color: #ff17A2;
     color: #fff;
     border-radius: 6px 6px 0 0;
     padding: 10px;
-    display: flex;
-    justify-content: space-between;
+    text-align: center;
 }
-.close{
-    align-self:center;
-}
-
-.modal-body{
-    padding-bottom: 10px;
-}
-.description{
-    font-family: 'Roboto Condensed';
-}
-#explicacion{
+.body-offset{
     display: grid;
-    place-items: center;
-    grid-auto-columns: 100%;
-    grid-template-columns: repeat(2,1fr);
-    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    grid-template-rows: repeat(2,auto);
+    grid-template-areas: "explicacion" "offset " "texto";
 }
-#explicacion img{
-    width: 140px;
-    height: 140px;
+.input-offset{
+    grid-area: offset;
+    display: flex;
+    margin-bottom: 1rem;
 }
-#exp-offset{
-    padding: 10px 20px;
-    text-align: justify;
-    font-size: 13px;
-    font-family: 'Roboto Condensed Light';
-}
-#inputoffset{
-    margin: 10px;
-}
-#offset{
-    border: 1px solid #a1a1a1;
-    border-radius: 6PX;
-    padding: 10px;
-    width: 150px;
-    background-color: #fff;
-}
-
 .mensaje-offset{
-    font-size: 12px;
+    grid-area: texto;
+    text-align: center;
+    font-size: 0.8rem;
+}
+.exp-offset{
+    grid-area: explicacion;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1.5rem;
+}
+.exp-offset p{
     text-align: left;
+    font-family: 'Roboto Condensed Light';
+    align-self: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.exp-offset img{
+    width: 150px;
+    /* height: 100px; */
+}
+
+#numoffset{
+    border: 1px solid #a1a1a1;
+    border-radius: 6px;
+    background-color: #fff;
+    text-align: center;
+    height: 2rem;
+    padding: 0.4rem;
     
 }
 
-.modal-footer{
-    padding: 1em;
-    display:flex;
-    justify-content:space-between;
-    align-items: center;
-    gap: 20px;
-    border-top:1px solid #929292;
-    
+#btn-limpiar-offset{
+    grid-area: "btnclear";
+    border:none;
+    border-radius:100%;
+    background-color: transparent;
+    width:20px;
+    height: 20px;
 }
-#guardaroffset{
-    background-color: #1877f2;
+#btn-limpiar-offset img{
+    border:none;
+    width: 45px;
+    height: 45px;
 }
-#cancelar{
-    background-color:#f26250;
+
+/* todo parte denuncia con datos */
+.denuncia{
+    grid-area: denuncia;
 }
-#limpiaroffset{
-    background-color: #008080;
-}
-#cancelar, #guardaroffset,#limpiaroffset{
-    color: #fff;
-    padding: 0.5em;
-    border: 1px solid;
+.registro-denuncia fieldset{
+    margin-top: 10px;
     border-radius: 6px;
-    transition: background-color .3s;
-    align-self: center;
-    width: 100%;
+    border: dotted 1px #FF17A2;
+    padding: 0.5rem 2rem;
 }
-#guardaroffset:hover{
-    background-color: #fff;
-    color:#1877f2;
+.registro-denuncia input, .registro-denuncia select{
+    border: solid 1px #0000003b;
+    border-radius: 5px;
+    /* width: 200px; */
+    height: 35px;
+    text-align: center;
+
 }
-#cancelar:hover{
-    background-color: #fff;
-    color: #f26250;
+
+.datos-denunciado{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    column-gap: 10px;
 }
+.denunciado{
+    display: flex;
+    flex-direction: column;
+}
+#informacion{
+    margin-top: 1rem;
+    border: 1px dotted #f1f50a;
+    border-radius: 6px;
+    background-color: #feffbc;
+    width:200px;
+
+}
+.titulo-informacion{
+    color: #ff17A2;
+    margin: 1rem 0 0 0;
+    text-align: center;
+}
+.parrafo-informacion{
+    font-family: 'Roboto Condensed Light';
+    padding: 10px;
+    text-align: center;
+}
+.agregar-denunciadocd{
+    display: inline-block;
+    margin: 30px 0;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #eee;
+    color:#FF17A2;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+    padding: auto;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s;
+}
+    
+.agregar-denunciadocd:hover{ 
+    border: 1px solid #FF17A2;
+}
+table {
+    font-family: "Roboto Condensed Light";
+    border-collapse: collapse;
+    width: 95%;
+    margin-top: 30px;
+    font-size: 0.7rem;
+}
+th{
+    border:1px solid #fff;
+    padding: 8px;
+    font-weight: bold;
+}
+
+td {
+    padding: 8px;
+    text-align: left;
+    border:1px solid #D6EEEE;
+}
+tr:hover {
+    background-color: #FF17A2;
+    color: #fff;
+}
+

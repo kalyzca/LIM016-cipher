@@ -25,6 +25,8 @@ describe('cipher', () => {
       expect(() => cipher.encode(0, 0)).toThrow(TypeError);
     });
 
+    //offset positivo
+
     //Para mayusculas
     it('should return "HIJKLMNOPQRSTUVWXYZABCDEFG" for "ABCDEFGHIJKLMNOPQRSTUVWXYZ" with offset 33', () => {
       expect(cipher.encode(33,'ABCDEFGHIJKLMNOPQRSTUVWXYZ')).toBe('HIJKLMNOPQRSTUVWXYZABCDEFG');
@@ -33,7 +35,7 @@ describe('cipher', () => {
     it('should return "hijklmnopqrstuvwxyzabcdefg" for "abcdefghijklmnopqrstuvwxyz" with offset 33', () => {
       expect(cipher.encode(33,'abcdefghijklmnopqrstuvwxyz')).toBe('hijklmnopqrstuvwxyzabcdefg');
     });
-
+    //Para números
     it('should return "3456789012" for "0123456789" with offset 33', () => {
       expect(cipher.encode(33, '0123456789')).toBe('3456789012');
     });
@@ -62,10 +64,7 @@ describe('cipher', () => {
     // Se quiser adicionar testes para letras minúsculas, descomente o teste
     // abaixo.
     //
-    // it('should return "hijklmnopqrstuvwxyzabcdefg" for "abcdefghijklmnopqrstuvwxyz" with offset 33', () => {
-    //   expect(cipher.encode(33, 'abcdefghijklmnopqrstuvwxyz')).toBe('hijklmnopqrstuvwxyzabcdefg');
-    // });
-
+    
     // Hacker edition
     //
     // [Español]
@@ -79,6 +78,7 @@ describe('cipher', () => {
     it('should return " !@" for " !@"', () => {
       expect(cipher.encode(33, ' !@')).toBe(' !@');
     });
+    
   });
 
   describe('cipher.decode', () => {
