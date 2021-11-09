@@ -13,7 +13,22 @@ let btndesencrypt = document.getElementById("btn-descifrar");
 let offsetMessage = document.getElementsByClassName("mensaje-offset")[0];
 
 //*todo EVENTO PARA EL BOTON SIGUIENTE
+document.getElementById("btn-denunciacd").addEventListener("click", ()=>{
+  alert("gol")
+  document.getElementsByClassName("denuncia")[0].style.display="block";
+  document.getElementsByClassName("registro-denuncia")[0].style.display="none";
+  document.getElementsByClassName("datos")[0].style.display="none";
+  document.getElementsByClassName("casocd")[0].style.display="flex";
+})
 
+//*todo EVENTO PARA EL BOTON ANTERIOR
+document.getElementById("btn-registrocd").addEventListener("click", ()=>{
+  alert("gol")
+  document.getElementsByClassName("denuncia")[0].style.display="block";
+  document.getElementsByClassName("registro-denuncia")[0].style.display="none";
+  document.getElementsByClassName("datos")[0].style.display="block";
+  document.getElementsByClassName("casocd")[0].style.display="none";
+})
 
 //*todo EVENTO PARA VOLVER AL INICIO
 document.getElementById("btn-inicio").addEventListener("click",()=>{
@@ -48,11 +63,7 @@ document.getElementsByClassName("exp")[0].addEventListener("click", function() {
   });
 
 
-//*todo EVENTO PARA EL BOTON LIMPIAR EL OFFSET
-document.getElementById("btn-limpiar-offset").addEventListener("click",()=>{
-  document.getElementById("numoffset").value="";
-  offsetMessage.innerHTML="";
-})
+//*todo EVENTO PARA EL BOTON 
 
 //*todo EVENTO PARA CIFRAR
 document.querySelector("#btn-encrypt").addEventListener("click",()=>{

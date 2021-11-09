@@ -29,6 +29,7 @@
       <nav >
         <ul class="menu">
           <img src="./img/inicio.png" id="btn-inicio" >
+          <img src="./img/anterior.png" id="btn-registrocd">
           <img src="./img/siguiente.png" id="btn-denunciacd">
         </ul>
       </nav>
@@ -41,8 +42,8 @@
               <button class="exp">INSTRUCCIONES</button>
               <div class="panel">
                 <ol>
-                  <li>Ingresa el desplazamiento.</li>
                   <li>Registra tus datos</li>
+                  <li>Ingresa el desplazamiento.</li>
                   <li>Clic en el botón cifrar</li>
                   <li>Clic en el botón descifrar.</li>
                 </ol>
@@ -58,9 +59,20 @@
                   </div>
                   <div class="input-offset">
                     <input type="number" class = "data" placeholder="Ingrese su clave" id="numoffset"/>
-                    <button type="submit" id="btn-limpiar-offset"><img src="./img/limpiar.png" alt="" ></button>
+                    <p class="mensaje-offset"></p>
                   </div>
-                  <p class="mensaje-offset"></p>
+                  <div class="botones-cif-descif">
+                    <a id="btn-encrypt" ><img src="img/cifrar.png" alt="btncifrar" > 
+                      <br><pre>Cifrar</pre>
+                    </a>
+                    <a id="btn-descifrar"><img src="img/descifrar.png" alt="btndescifrar"> 
+                      <br><pre>Descifrar</pre>
+                    </a>
+                    <a id="btn-limpiar"><img src="img/limpiar.png" alt="btnlimpiar"> 
+                      <br><pre>Limpiar</pre>
+                    </a>
+                    
+                  </div>
                   
                 </div>
               </section>
@@ -83,24 +95,21 @@
                 <input class="data" type="email" name="email" id="email" placeholder="usuario@gmail.com">
                 <label >Dirección</label>
                 <input class="data" type="text" placeholder="Ingrese su dirección exacta">
-  
-                <div class="botones-cif-descif">
-                  <a id="btn-encrypt" ><img src="img/cifrar.png" alt="btncifrar" > 
-                    <br><pre>Cifrar</pre>
-                  </a>
-                  <a id="btn-descifrar"><img src="img/descifrar.png" alt="btndescifrar"> 
-                    <br><pre>Descifrar</pre>
-                  </a>
-                  <a id="btn-limpiar"><img src="img/limpiar.png" alt="btnlimpiar"> 
-                    <br><pre>Limpiar</pre>
-                  </a>
-                  
-                </div>
               </fieldset>
             </form>
           </div>
           
           <section class="denuncia">
+            <form class="casocd">
+              <fieldset>
+                <div class="denuncia-casocd">
+                  <label for="">Descripción del caso</label>
+                  <p>Responde las siguientes preguntas</p>
+                  <input type="text" name="caso" id="">
+                </div>
+              </fieldset>
+              
+            </form>
             <form class="registro-denuncia">
               <fieldset>
                 <legend>Datos del(os) denunciado(s)</legend>
