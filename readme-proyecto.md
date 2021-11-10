@@ -2,9 +2,6 @@
 
 **TABLA DE CONTENIDO**
 
-[TOCM]
-
-[TOC]
 ## 1. Nombre del Producto
 
 SosCe es un página web que registra denuncias por violencia sufrida o presenciada.
