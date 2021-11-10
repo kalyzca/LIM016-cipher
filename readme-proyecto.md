@@ -10,8 +10,6 @@ SosCe es un página web que registra denuncias por violencia sufrida o presencia
 - En SoSCe, las denuncias puede ser de forma anónima o con registro de datos. También se puede pedir socorro o auxilio.
 - Si la denuncia es anónima entoncés cifrará la descripción del caso en sí( descripción de la denuncia), en cambio si es una denuncia con registro de datos; cifrara y descifrará los datos sensibles como es el nombre, apellidos, dni, correo electrónico, teléfono, dirección y el caso.
 
-	[link] [Definición del producto e Historias de usuario](http://devsoftwaresys.atlassian.net/wiki/spaces/D/pages/5963801/DOCUMENTACI+N+DEL+PROYECTO "Definición del producto e Historias de usuario")
-
 ### 2.1 ¿Quiénes son los principales usuarios de producto?
 
 Las personas (niños, adolescentes, jóvenes, adultos y adultos mayores) que realizan la denuncia por violencia.
@@ -27,6 +25,8 @@ Las personas (niños, adolescentes, jóvenes, adultos y adultos mayores) que rea
 + Da opciones(anónima, con datos, pedida SOS) para poder registrar su denuncia.
 + Protege los datos sensibles mediante la encriptación y desencriptación.
 + Protegiendo al denunciante o víctima que presencia o sufre la violencia.
+
+[link] [Definición del producto e Historias de usuario](http://devsoftwaresys.atlassian.net/wiki/spaces/D/pages/5963801/DOCUMENTACI+N+DEL+PROYECTO "Definición del producto e Historias de usuario")
 
 ## 3. Organización del Proyecto
 
@@ -46,6 +46,11 @@ El prototipo se realizó en Figma.
 
 ![prototipo1](https://user-images.githubusercontent.com/69210648/141059462-1b00d71c-4ec5-4055-9a5b-cfcf61b82d75.png)
 
+![prototipo2](https://user-images.githubusercontent.com/69210648/141059725-88aa941a-b072-49f1-9664-ca4ab1acc33f.png)
+
+![prototipo3](https://user-images.githubusercontent.com/69210648/141059745-79bc9163-d724-498e-b8a3-62491a8cd27b.png)
+
+![prototipo4](https://user-images.githubusercontent.com/69210648/141059762-110c44e7-fbd2-4644-951c-847144f71343.png)
 
 ### 4.2 Diseño final
 
