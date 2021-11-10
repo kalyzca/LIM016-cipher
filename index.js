@@ -13,7 +13,22 @@ let btndesencrypt = document.getElementById("btn-descifrar");
 let offsetMessage = document.getElementsByClassName("mensaje-offset")[0];
 
 //*todo EVENTO PARA EL BOTON SIGUIENTE
+document.getElementById("btn-denunciacd").addEventListener("click", ()=>{
+  alert("gol")
+  document.getElementsByClassName("denuncia")[0].style.display="block";
+  document.getElementsByClassName("registro-denuncia")[0].style.display="none";
+  document.getElementsByClassName("datos")[0].style.display="none";
+  document.getElementsByClassName("casocd")[0].style.display="flex";
+})
 
+//*todo EVENTO PARA EL BOTON ANTERIOR
+document.getElementById("btn-registrocd").addEventListener("click", ()=>{
+  alert("gol")
+  document.getElementsByClassName("denuncia")[0].style.display="block";
+  document.getElementsByClassName("registro-denuncia")[0].style.display="none";
+  document.getElementsByClassName("datos")[0].style.display="block";
+  document.getElementsByClassName("casocd")[0].style.display="none";
+})
 
 //*todo EVENTO PARA VOLVER AL INICIO
 document.getElementById("btn-inicio").addEventListener("click",()=>{
@@ -48,11 +63,7 @@ document.getElementsByClassName("exp")[0].addEventListener("click", function() {
   });
 
 
-//*todo EVENTO PARA EL BOTON LIMPIAR EL OFFSET
-document.getElementById("btn-limpiar-offset").addEventListener("click",()=>{
-  document.getElementById("numoffset").value="";
-  offsetMessage.innerHTML="";
-})
+//*todo EVENTO PARA EL BOTON 
 
 //*todo EVENTO PARA CIFRAR
 document.querySelector("#btn-encrypt").addEventListener("click",()=>{
@@ -74,6 +85,7 @@ document.querySelector("#btn-encrypt").addEventListener("click",()=>{
     let dni=document.getElementById("numdoc").value;
     let telefono=document.getElementById("phone").value;
     let correo=document.getElementById("email").value;
+    let direccion=document.getElementById("direccion").value;
 
     //* cifrando los datos de los input
     document.getElementById("name").value=cipher.encode(offsetNumber,nombres)
@@ -82,6 +94,7 @@ document.querySelector("#btn-encrypt").addEventListener("click",()=>{
     document.getElementById("numdoc").value=cipher.encode(offsetNumber,dni);
     document.getElementById("phone").value=cipher.encode(offsetNumber,telefono);
     document.getElementById("email").value=cipher.encode(offsetNumber,correo);
+    document.getElementById("direccion").value=cipher.encode(offsetNumber,direccion);
   }
 
   else{
@@ -98,6 +111,7 @@ document.querySelector("#btn-encrypt").addEventListener("click",()=>{
 btndesencrypt.addEventListener("click", ()=> {
   
   document.getElementById("btn-descifrar").addEventListener("click",()=>{
+    
     let des = document.getElementById("numoffset").value;
     des=(Number(des));
     // console.log(des)
@@ -110,12 +124,16 @@ btndesencrypt.addEventListener("click", ()=> {
       let dniDes=document.getElementById("numdoc").value;
       let telefonoDes=document.getElementById("phone").value;
       let correoDes=document.getElementById("email").value;
+      let direccionDes=document.getElementById("direccion").value;
+
       document.getElementById("name").value=cipher.decode(des,nombresDes);
       document.getElementById("lastnamepat").value= cipher.decode(des,apellidoPaternoDes);
       document.getElementById("lastnamemat").value= cipher.decode(des,apellidoMaternoDes);
       document.getElementById("numdoc").value=cipher.decode(des,dniDes);
       document.getElementById("phone").value=cipher.decode(des,telefonoDes);
       document.getElementById("email").value=cipher.decode(des,correoDes);
+      document.getElementById("direccion").value=cipher.decode(des,direccionDes);
+      
     }
   
   });

@@ -105,6 +105,9 @@
         font-size: 1.1rem;
         margin-left: 2rem;
     }
+    .register-datos{
+        flex-wrap: wrap;
+    }
 }
 @media screen and (max-width:700px) {
     .title{
@@ -124,6 +127,9 @@
         font-size: 1rem;
         margin-left: 2rem;
     }
+    .register-datos{
+        flex-wrap: wrap;
+    }
 }
 
 .principal{
@@ -142,7 +148,7 @@
     list-style: none;
 }
 
-#btn-inicio, #btn-denunciacd{
+#btn-inicio, #btn-denunciacd, #btn-registrocd{
     width: 40px;
     height: 40px;
 }
@@ -160,20 +166,18 @@
 }
 
 #registro{
-    display:grid;
+    display:flex;
+    justify-content: center;
 }
 
 .register-datos{
     display: flex;
-    flex-direction: row ;
+    flex-direction: row;
     justify-content: center;
     gap: 20px;
 }
 
 /*  todo Formulario de registro */
-/* .datos{
-    
-} */
 .datos h4{
     color:#FF17A2;
     text-align: center;
@@ -184,7 +188,7 @@
     flex-direction: column;
     border-radius: 6px;
     border: dotted 1px #FF17A2;
-    padding: 0.5rem 2rem;
+    padding: 1rem 2rem;
 }
 .datos fieldset legend, .registro-denuncia legend{
     text-align: left;
@@ -258,8 +262,7 @@ option {
     
 }
 .exp{
-    margin-top: 70px;
-    justify-self: center;
+    /* justify-self: center; */
     background-color: #FF17A2;
     padding: 0.8rem;
     border: none;
@@ -309,6 +312,7 @@ li::marker{
     border-radius: 6px;
     background-color: #fff;
     margin-top: 1rem;
+    padding-bottom: 1rem;
     
 }
 .titulo{
@@ -323,18 +327,9 @@ li::marker{
     justify-items: center;
     align-content: center;
     grid-template-rows: repeat(2,auto);
-    grid-template-areas: "explicacion" "offset " "texto";
+    grid-template-areas: "explicacion" "offset ";
 }
-.input-offset{
-    grid-area: offset;
-    display: flex;
-    margin-bottom: 1rem;
-}
-.mensaje-offset{
-    grid-area: texto;
-    text-align: center;
-    font-size: 0.8rem;
-}
+
 .exp-offset{
     grid-area: explicacion;
     display: flex;
@@ -349,10 +344,23 @@ li::marker{
     font-weight: bold;
 }
 .exp-offset img{
-    width: 150px;
-    /* height: 100px; */
+    width: 120px;
+    
 }
 
+/* Caja donde estan los elementos del offset */
+.input-offset{
+    grid-area: offset;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.mensaje-offset{
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/*? input del offset */
 #numoffset{
     border: 1px solid #a1a1a1;
     border-radius: 6px;
@@ -363,19 +371,6 @@ li::marker{
     
 }
 
-#btn-limpiar-offset{
-    grid-area: "btnclear";
-    border:none;
-    border-radius:100%;
-    background-color: transparent;
-    width:20px;
-    height: 20px;
-}
-#btn-limpiar-offset img{
-    border:none;
-    width: 45px;
-    height: 45px;
-}
 
 /* todo parte denuncia con datos */
 .denuncia{
