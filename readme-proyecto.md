@@ -109,10 +109,18 @@ El prototipo se realizó en Figma.
 ### 6.2 Funcionalidad
 
 + Al iniciar la página se puede elegir como se desea realizar la denuncia(anónima o con registro de datos).
+  ![interfaz](https://user-images.githubusercontent.com/69210648/141061405-6a41dcab-7410-4fa9-b2b7-77f375de91ec.png)
+
 + Cuando damos click en Con datos, se muestra una interfaz donde existe un boton de instrucciones que se despliega al dar click.
 + Sección que permite escribir el offset o desplazamiento a usar en el cifrado/descifrado denominado Desplazamiento.
 + Un formulario donde se registrarán los datos sensibles como el nombre, apellidos paterno y materno, dni, telefono, correo electrónico y dirección.
+
+![registro de datos](https://user-images.githubusercontent.com/69210648/141061489-34bb3979-0bf2-409f-8502-3f7715562799.png)
+
 + Al click en los botones para cifrar y descifrar se mostrara el resultado en la mismo formulario.
+
+![cifrando](https://user-images.githubusercontent.com/69210648/141061535-75a92cde-0b11-4267-94db-5b9f54f34190.png)
+
 ## 7. Criterios de Aceptación Mínimos del Proyecto
 
 + Usa este alfabeto simple (solamente mayúsculas y sin ñ),  basado en el cifrado César, en el cual se sustituye una letra por otra que se encuentre cierto número de posiciones adelante o atrás, dentro del abecedario español sin considerar la ñ.
