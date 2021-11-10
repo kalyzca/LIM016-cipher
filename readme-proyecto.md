@@ -56,6 +56,10 @@ El prototipo se realizó en Figma.
 
 [link] [Denuncia con datos](https://kalyzca.github.io/LIM016-cipher/ "Denuncia con datos")
 
+![interfaz](https://user-images.githubusercontent.com/69210648/141060897-7cdfb7cd-155b-46ad-9c31-fd977af1497a.png)
+
+![cifrado](https://user-images.githubusercontent.com/69210648/141060924-4670638b-57fc-4000-b70a-f21d314f08e9.png)
+
 ## 5. Objetivos de Aprendizaje
 
 + ### HTML
