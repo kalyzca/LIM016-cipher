@@ -44,6 +44,9 @@ El prototipo se realizó en Figma.
 
 [link] [Prototipo en figma](https://www.figma.com/file/N7Jaq8r13uH1bh1IDPZ601/AlgoritmoCesar?node-id=46%3A27 "Prototipo en figma")
 
+![prototipo1](https://user-images.githubusercontent.com/69210648/141059462-1b00d71c-4ec5-4055-9a5b-cfcf61b82d75.png)
+
+
 ### 4.2 Diseño final
 
 ## 5. Objetivos de Aprendizaje
