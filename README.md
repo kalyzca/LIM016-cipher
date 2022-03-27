@@ -1,4 +1,4 @@
-# SoSCe
+# SOSCE
 
 **TABLA DE CONTENIDO**
 
@@ -7,7 +7,7 @@
 SosCe es un página web que registra denuncias por violencia sufrida o presenciada.
 
 ## 2. Definición del Producto 
-- En SoSCe, las denuncias puede ser de forma anónima o con registro de datos. También se puede pedir socorro o auxilio.
+- En sosce, las denuncias puede ser de forma anónima o con registro de datos. También se puede pedir socorro o auxilio.
 - Si la denuncia es anónima entoncés cifrará la descripción del caso en sí( descripción de la denuncia), en cambio si es una denuncia con registro de datos; cifrara y descifrará los datos sensibles como es el nombre, apellidos, dni, correo electrónico, teléfono, dirección y el caso.
 
 ### 2.1 ¿Quiénes son los principales usuarios de producto?
