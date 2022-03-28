@@ -20,139 +20,262 @@
     box-sizing: border-box;
 }
 
+/*etiquetas*/
 
-
-/* BIENVENIDA */
-.bienvenida{
+/* todo HEADER */
+.header{
     font-family: 'Roboto Condensed';
     background: url("img/violenciainfantil.jpg"); 
     background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height:100vh;
+    height:41rem;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    background-repeat: no-repeat;
 }
+
+.subtitle,.title, .paz{
+    color: #fff;
+}
+
 .title{
     background: linear-gradient(#ff0000, #ff17A2);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     color: #ff17A2;
-    font-size:2rem;
+    font-size:6rem;
     -webkit-text-stroke: .5px rgb(34, 2, 2);
+    
 }
 .subtitle{
-    font-size:0.75rem;
-    margin: 0 1rem;
+    font-size:2.5rem;
 }
 .paz{
-    letter-spacing: 3px;
-    font-size: 0.5em;
-    margin: 0 0.5rem;
-}
-.subtitle,.title, .paz{
-    color: #fff;
+    letter-spacing: 0.5rem;
+    font-size: 1.5rem;
 }
 .how-do-denunciation {
     display: grid;
-    justify-content:end;
+    row-gap: 1rem;
     grid-auto-flow:row;
-    margin-top: 0.5rem;
-    margin-right: 2.5rem;
+    margin-top: 2rem;
 }
-.how-do-denunciation p{
+.how-do-denunciation h4{
     color: #ff47b2;
-    font-size: 1rem;
+    font-size: 2rem;
     justify-self: end;
+    margin-right: 3rem;
 }
 #anonima, #condatos, #socorro{
     justify-self: center;
     color: #fff;
-    font-size: 0.75rem;
-    cursor: pointer;
+    text-align: center;
+    margin-left: 50rem;
+    font-size: 1.2rem;
 }
 
 #anonima:hover, #condatos:hover, #socorro:hover{
-    border-bottom: 1px solid #FF17A2;
+    border-bottom: 3px solid #FF17A2;
     color: #FF17A2;
     text-shadow: 3px 3px 3px rgb(#fff,#fff ,#fff,0.3);
 }
 
-/* FORMULARIO */
+/*! responsive */
+@media screen and (max-width:1000px) {
+    .title{
+        font-size:5rem;
+    }    
+    .subtitle{
+        font-size: 2rem;
+    }
+    .paz{
+        font-size: 1rem;
+    }
+    .how-do-denunciation h4{
+        font-size: 1.7rem;
+        justify-self: center;
+    }
+    #anonima, #condatos, #socorro{
+        font-size: 1.1rem;
+        margin-left: 2rem;
+    }
+    .register-datos{
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width:700px) {
+    .title{
+        font-size:3.5rem;
+    }    
+    .subtitle{
+        font-size: 1.5rem;
+    }
+    .paz{
+        font-size: .8rem;
+    }
+    .how-do-denunciation h4{
+        font-size: 1.5rem;
+        justify-self: center;
+    }
+    #anonima, #condatos, #socorro{
+        font-size: 1rem;
+        margin-left: 2rem;
+    }
+    .register-datos{
+        flex-wrap: wrap;
+    }
+}
+
 .principal{
     display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
     font-family: 'Roboto Condensed';
-    height: 100vh;
 }
+
+/* todo MENU DE NAVEGACIÓN */
 .menu{
-    align-self: flex-end;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
 }
-.menu>li{
+.menu li {
     list-style: none;
 }
 
-.btn-inicio, .btn-denunciacd, .btn-registrocd{
-    width: 1.75rem;
-    height: 1.75rem;
-    cursor: pointer;
+#btn-inicio, #btn-denunciacd, #btn-registrocd{
+    width: 40px;
+    height: 40px;
 }
 
-/* todo DENUNCIA REGISTRANDO DATOS*/
-.denuncia-con-datos{
-    background-color: #fff;
-}
 .titulo-denuncia-con-datos{
     text-align: center;
     color: #FF17A2;
-    font-size:1rem;
+    padding: 1rem;
+}
+/* todo DENUNCIA REGISTRANDO DATOS*/
+
+.denuncia-con-datos{
+    background-color: #fff;
+
+}
+
+#registro{
+    display:flex;
+    justify-content: center;
 }
 
 .register-datos{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    gap: 20px;
 }
-.instrucciones{
+
+/*  todo Formulario de registro */
+.datos h4{
+    color:#FF17A2;
+    text-align: center;
+    padding: 1rem;
+}
+.datos fieldset{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    margin-bottom: 1rem;
+    border-radius: 6px;
+    border: dotted 1px #FF17A2;
+    padding: 1rem 2rem;
 }
-/* ACORDEON DE INSTRUCCIONES Y EXPLICACIÓN DEL CIFRADO CÉSAR */
-.acordeon{
-    width: 16rem;
-    margin: 0.5rem auto;
-    display: flex;
-    flex-direction: column;
-}
-.titulo-instrucciones{
+.datos fieldset legend, .registro-denuncia legend{
+    text-align: left;
+    color: #fff;
+    padding:.5rem;
     background-color: #FF17A2;
-    padding: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.datos fieldset label, .registro-denuncia label{
+    font-size: 0.8rem;
+    font-family: 'Roboto Condensed Light';
+    font-weight: bold;
+    color: #FF17A2;
+    padding: 0.3rem;
+}
+
+
+.datos fieldset>input, select{
+    border: solid 1px #0000003b;
+    border-radius: 5px;
+    height: 35px;
+    text-align: center;
+}
+
+select {
+    color: #0000009f;
+}
+
+option[value=""][disabled] {
+    display: none;
+}
+
+option {
+    color:rgb(22, 21, 21);
+}
+
+.botones-cif-descif{
+    display: flex;
+    justify-content: center;
+    border:none;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.botones-cif-descif pre{
+    font-family: 'Roboto Condensed';
+    color: #FF17A2;
+    text-align: center;
+}
+
+#btn-encrypt,#btn-descifrar,#btn-limpiar{
+    background-color: transparent;
+    font-size: 0.8rem;
+    border: none;
+    color: #FF17A2;
+    padding: 0px 20px;
+} 
+#btn-encrypt img,#btn-descifrar img, #btn-limpiar img{
+    width: 40px;
+    height: 40px;
+}
+
+
+/* todo ACORDEON DE INSTRUCCIONES Y EXPLICACIÓN DEL CIFRADO CÉSAR */
+.acordeon{
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.exp{
+    /* justify-self: center; */
+    background-color: #FF17A2;
+    padding: 0.8rem;
     border: none;
     text-align:center;
     color: #fff;
     font-family: 'Roboto Condensed';
-    font-size: 0.75rem;
     transition: 0.4s;
 }
-.active, .titulo-instrucciones:hover {
+.active, .exp:hover {
     background-color: #ccc;
     color: #000000;
 }
-.titulo-instrucciones:after {
+.exp:after {
     content: '\002B';
     color:#fff;
     font-weight: bold;
-    margin-left: 8rem;
+    margin-left: 5px;
 }
 
 .active:after {
@@ -171,8 +294,8 @@
 .panel ol{
     font-family: 'Roboto Condensed Light';
     font-weight: bold;
-    font-size: 0.75rem;
-    padding: 0.5rem;
+    font-size: 0.9rem;
+    padding: 1rem;
 }
 
 li::marker{
@@ -181,136 +304,69 @@ li::marker{
 
 /* todo CAJA DE OFFSET*/
 .desplazamiento{
-    width: 16rem;
     border: dotted 1px #FF17A2;
+    border-radius: 6px;
     background-color: #fff;
-    margin: auto;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    
 }
-.titulo-desplazamiento{
+.titulo{
     background-color: #ff17A2;
     color: #fff;
-    padding: 0.5rem 0.5rem 0.5rem 0.75rem;
-    text-align: left;
-    font-size: 0.75rem;
+    border-radius: 6px 6px 0 0;
+    padding: 10px;
+    text-align: center;
 }
 .body-offset{
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    grid-template-rows: repeat(2,auto);
+    grid-template-areas: "explicacion" "offset ";
 }
 
 .exp-offset{
+    grid-area: explicacion;
     display: flex;
-    justify-content: space-around;
-    padding: 0.5rem;
+    justify-content: space-evenly;
+    padding: 1.5rem;
 }
 .exp-offset p{
     text-align: left;
     font-family: 'Roboto Condensed Light';
     align-self: center;
-    font-size: 10px;
+    font-size: 0.8rem;
     font-weight: bold;
 }
 .exp-offset img{
-    width: 4.5rem;
-    height: 4.5rem;
+    width: 120px;
+    
 }
+
 /* Caja donde estan los elementos del offset */
 .input-offset{
+    grid-area: offset;
     display: flex;
     flex-direction: column;
-    padding:0 0.5rem;
+    justify-content: space-evenly;
 }
-.dataOfset{
-    padding: 0.5rem 0;
+.mensaje-offset{
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/*? input del offset */
+#numoffset{
     border: 1px solid #a1a1a1;
     border-radius: 6px;
     background-color: #fff;
     text-align: center;
-    font-size: 0.75rem;
-}
-.mensaje-offset{
-    text-align: center;
-    font-size: 0.75rem;
-}
-
-.botones-cif-descif{
-    display: flex;
-    justify-content: center;
-    border:none;
-    text-align: center;
-    padding-bottom: 0.5rem;
-}
-
-.botones-cif-descif pre{
-    font-family: 'Roboto Condensed';
-    color: #FF17A2;
-    text-align: center;
-}
-
-.btn-encrypt,.btn-descifrar,.btn-limpiar{
-    background-color: transparent;
-    font-size: 0.75rem;
-    border: none;
-    color: #FF17A2;
-    padding: 0 0.5rem;
-    cursor: pointer;
-} 
-.btn-encrypt img,.btn-descifrar img, .btn-limpiar img{
-    width: 1.5rem;
-    height: 1.5rem;
-}
-
-/*  todo FORMULARIO CON REGISTRO DE DATOS */
-.datos{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: space-around;
-    width: 16rem;
-    border-radius: 6px;
-    border: dotted 1px #FF17A2;
-    margin:0.5rem auto;
-    padding: 1rem;
+    height: 2rem;
+    padding: 0.4rem;
     
 }
-.datos legend, .registro-denuncia legend{
-    align-self: flex-start;
-    color: #fff;
-    padding:0.5rem;
-    background-color: #FF17A2;
-    font-size: 0.75rem;
-}
 
-.datos label, .registro-denuncia label{
-    font-size: 0.75rem;
-    font-family: 'Roboto Condensed Light';
-    font-weight: bold;
-    color: #FF17A2;
-    justify-self: flex-start;
-    margin: 0 0.5rem;
-}
-
-.datos>input, select{
-    border: solid 1px #0000003b;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 0.75rem;
-    margin: 0.5rem;
-    padding: 0.5rem 0;
-}
-
-select {
-    color: #0000009f;
-}
-
-option[value=""][disabled] {
-    display: none;
-}
-
-option {
-    color:rgb(22, 21, 21);
-}
 
 /* todo parte denuncia con datos */
 .denuncia{
@@ -401,80 +457,3 @@ tr:hover {
     color: #fff;
 }
 
-
-/* RESPONSIVE */
-@media screen and (min-width:550px) {
-    .title{
-        font-size:2.5rem;
-    }
-    .subtitle{
-        font-size:1rem;
-    }
-    .paz{
-        letter-spacing: 5px;
-        font-size: 0.75em;
-    }
-    .how-do-denunciation p{
-        font-size: 1rem;
-    }
-    #anonima, #condatos, #socorro{
-        font-size: 0.75rem;
-    }
-    .titulo-denuncia-con-datos{
-        font-size: 1.5rem;
-    }
-    .instrucciones{
-        flex-direction: row;
-        justify-content: center;
-        column-gap: 1rem;
-    }
-
-}
-@media screen and (min-width:768px) {
-    .title{
-        font-size:3.5rem;
-    }
-    .subtitle{
-        font-size:1.5rem;
-    }
-    .paz{
-        letter-spacing: 0.5rem;
-        font-size: 0.75rem;
-    }
-    .how-do-denunciation p{
-        font-size: 1.5rem;
-    }
-    #anonima, #condatos, #socorro{
-        font-size: 1rem;
-    }
-}
-@media screen and (min-width:1000px) {
-    .title{
-        font-size:5.5rem;
-    }
-    .subtitle{
-        font-size:2rem;
-    }
-    .paz{
-        letter-spacing: 0.75rem;
-        font-size: 1.5rem;
-    }
-    .how-do-denunciation{
-        margin-right: 8rem;
-    }
-    .how-do-denunciation p{
-        font-size: 1.5rem;
-    }
-    #anonima, #condatos, #socorro{
-        font-size: 1rem;;
-    }
-   
-    .titulo-denuncia-con-datos{
-        font-size: 1.5rem;
-    }
-    .datos{
-        width: 18rem;
-    }
-  
-}
-  
