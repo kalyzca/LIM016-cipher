@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
-  
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Algoritmo Cipher</title>
     <link rel="stylesheet" href="style.css">
-
   </head>
+
   <body>
-    <!-- header -->
-    <header class="header">
+    <!-- Bienvenida -->
+    <section class="bienvenida">
       <!-- titulos  -->
       <section class="frases">
         <p class="subtitle">Evita callar, cuando seas testigo o sufras cualquier tipo de violencia.</p>
@@ -19,173 +18,168 @@
       </section>
       <!-- como desea realzar la denuncia -->
       <section class="how-do-denunciation">
-        <h4>¿Cómo deseas realizar la denuncia?</h4>
+        <p>¿Cómo deseas realizar la denuncia?</p>
         <a id="anonima">Anónima</a>
         <a id="condatos">Con Datos</a>
         <a id="socorro">SOS</a>
       </section>
-    </header>
+    </section>
+    <!-- Formularios -->
     <main class="principal">
-      <nav >
-        <ul class="menu">
-          <img src="./img/inicio.png" id="btn-inicio" >
-          <img src="./img/anterior.png" id="btn-registrocd">
-          <img src="./img/siguiente.png" id="btn-denunciacd">
-        </ul>
-      </nav>
+      <ul class="menu">
+        <li><img src="./img/inicio.png" class="btn-inicio" id="btn-inicio" ></li>
+        <!-- <li><img src="./img/anterior.png" class="btn-registrocd" id="btn-registrocd"></li> -->
+        <!-- <li><img src="./img/siguiente.png" class="btn-denunciacd" id="btn-denunciacd"></li> -->
+      </ul>
+      
       <!-- denuncia  con registro de datos-->
       <section class="denuncia-con-datos">
-        <h2 class="titulo-denuncia-con-datos">FORMATO DE REGISTRO DE DENUNCIAS POR VIOLENCIA CON REGISTRO DE DATOS</h2>
-        <article id="registro">
-          <div class="register-datos">
-            <section class="acordeon">
-              <button class="exp">INSTRUCCIONES</button>
-              <div class="panel">
-                <ol>
-                  <li>Registra tus datos</li>
-                  <li>Ingresa el desplazamiento.</li>
-                  <li>Clic en el botón cifrar</li>
-                  <li>Clic en el botón descifrar.</li>
-                </ol>
-              </div>
-              <section class="desplazamiento">
-                <div class="titulo" >
-                  <h5>DESPLAZAMIENTO</h5>
+        <p class="titulo-denuncia-con-datos">FORMATO DE REGISTRO DE DENUNCIAS POR VIOLENCIA</p>
+        <div class="register-datos">
+          <section class="acordeon">
+            <button class="titulo-instrucciones">INSTRUCCIONES</button>
+            <div class="panel">
+              <ol>
+                <li>Registra tus datos</li>
+                <li>Ingresa el desplazamiento.</li>
+                <li>Clic en el botón cifrar</li>
+                <li>Clic en el botón descifrar.</li>
+              </ol>
+            </div>
+          </section>
+          <div class="instrucciones">
+            <fieldset class="datos">
+              <legend>Datos personales del denunciante</legend>
+              <label for="">Nombres</label>
+              <input class="data" type="text" id="name" placeholder="Ingrese sus nombres"/>
+              <label for="">Apellido Paterno</label>
+              <input class="data" type="text" id="lastnamepat" placeholder="Ingrese su apellido paterno"/>
+              <label for="">Apellido Materno</label>
+              <input class="data" type="text" id="lastnamemat" placeholder="Ingrese su apellido materno"/>
+              <label for="">Documento nacional de identidad</label>
+              <input class="data" type="number" id="numdoc" placeholder="Ingrese su DNI">
+              <label for="">Telefono</label>
+              <input class="data" type="tel" id="phone" placeholder="Ingrese teléfono fijo o celular"/>
+              <label for="">Correo electrónico</label>
+              <input class="data" type="email" name="email" id="email" placeholder="usuario@gmail.com">
+              <label >Dirección</label>
+              <input class="data" type="text" id="direccion" placeholder="Ingrese su dirección exacta">
+            </fieldset>
+            <div class="desplazamiento">
+              <h5 class="titulo-desplazamiento" >DESPLAZAMIENTO</h5>
+              <section class="body-offset">
+                <div class="exp-offset">
+                  <p>Por ejemplo, con un desplazamiento de 3, la A sería sustituida por la D (situada 3 lugares a la derecha de la A)</p>
+                  <img src="./img/algcesar.png" alt="cifradocesar" >
                 </div>
-                <div class="body-offset">
-                  <div class="exp-offset">
-                    <p>Por ejemplo, con un desplazamiento de 3, la A sería sustituida por la D (situada 3 lugares a la derecha de la A)</p>
-                    <img src="./img/algcesar.png" alt="cifradocesar" >
-                  </div>
-                  <div class="input-offset">
-                    <input type="number" class = "data" placeholder="Ingrese su clave" id="numoffset"/>
-                    <p class="mensaje-offset"></p>
-                  </div>
-                  <div class="botones-cif-descif">
-                    <a id="btn-encrypt" ><img src="img/cifrar.png" alt="btncifrar" > 
-                      <br><pre>Cifrar</pre>
-                    </a>
-                    <a id="btn-descifrar"><img src="img/descifrar.png" alt="btndescifrar"> 
-                      <br><pre>Descifrar</pre>
-                    </a>
-                    <a id="btn-limpiar"><img src="img/limpiar.png" alt="btnlimpiar"> 
-                      <br><pre>Limpiar</pre>
-                    </a>
-                    
-                  </div>
+                <div class="input-offset">
+                  <input type="number" class = "dataOfset" placeholder="Ingrese su clave" id="numoffset"/>
+                  <p class="mensaje-offset"></p>
+                </div>
+                <div class="botones-cif-descif">
+                  <button class="btn-encrypt" id="btn-encrypt"><img src="img/cifrar.png" alt="btncifrar" > 
+                    <br><pre>Cifrar</pre>
+                  </button>
+                  <button class="btn-descifrar" id="btn-descifrar"><img src="img/descifrar.png" alt="btndescifrar"> 
+                    <br><pre>Descifrar</pre>
+                  </button>
+                  <button id="btn-limpiar" class="btn-limpiar"><img src="img/limpiar.png" alt="btnlimpiar"> 
+                    <br><pre>Limpiar</pre>
+                  </button>
                   
                 </div>
               </section>
-              
-            </section>
-            <form class="datos">
-              <fieldset>
-                <legend>Datos personales del denunciante</legend>
-                <label for="">Nombres</label>
-                <input class="data" type="text" id="name" placeholder="Ingrese sus nombres"/>
-                <label for="">Apellido Paterno</label>
-                <input class="data" type="text" id="lastnamepat" placeholder="Ingrese su apellido paterno"/>
-                <label for="">Apellido Materno</label>
-                <input class="data" type="text" id="lastnamemat" placeholder="Ingrese su apellido materno"/>
-                <label for="">Documento Nacional de Identidad</label>
-                <input class="data" type="number" id="numdoc" placeholder="Ingrese su DNI">
-                <label for="">Telefono</label>
-                <input class="data" type="tel" id="phone" placeholder="Ingrese teléfono fijo o celular"/>
-                <label for="">Correo electrónico</label>
-                <input class="data" type="email" name="email" id="email" placeholder="usuario@gmail.com">
-                <label >Dirección</label>
-                <input class="data" type="text" placeholder="Ingrese su dirección exacta">
-              </fieldset>
-            </form>
+            </div>
           </div>
+         
           
-          <section class="denuncia">
-            <form class="casocd">
-              <fieldset>
-                <div class="denuncia-casocd">
-                  <label for="">Descripción del caso</label>
-                  <p>Responde las siguientes preguntas</p>
-                  <input type="text" name="caso" id="">
+        </div>
+          
+        <!--section class="denuncia">
+          <form class="casocd">
+            <fieldset>
+              <div class="denuncia-casocd">
+                <label for="">Descripción del caso</label>
+                <p>Responde las siguientes preguntas</p>
+                <input type="text" name="caso" id="">
+              </div>
+            </fieldset>
+            
+          </form>
+          <form class="registro-denuncia">
+            <fieldset>
+              <legend>Datos del(os) denunciado(s)</legend>
+              <div class="datos-denunciado">
+                <div class="denunciado" >
+                  <label for="">Apellido Paterno</label>
+                  <input type="text" id="lastnamepatden" placeholder="Ingrese su apellido paterno"/>
                 </div>
-              </fieldset>
-              
-            </form>
-            <form class="registro-denuncia">
-              <fieldset>
-                <legend>Datos del(os) denunciado(s)</legend>
-                <div class="datos-denunciado">
-                  <div class="denunciado" >
-                    <label for="">Apellido Paterno</label>
-                    <input type="text" id="lastnamepatden" placeholder="Ingrese su apellido paterno"/>
-                  </div>
-                  <div class="denunciado">
-                    <label for="">Apellido Materno</label>
-                    <input type="text" id="lastnamematden" placeholder="Ingrese su apellido materno"/>
-                  </div>
-                  <div class="denunciado">
-                    <label for="">Nombres</label>
-                    <input type="text" placeholder="Ingrese sus nombres"/>
-                  </div>
-                  <div class="denunciado">
-                    <label for="">Tipo de violencia</label>
-                    <select name="" id="">
-                      <option value="">Violencia Familiar</option>
-                      <option value="">Violencia de Género</option>
-                      <option value="">Violencia Escolar</option>
-                      <option value="">Violencia Laboral</option>
-                      <option value="">Violencia Animal</option>
-                      <option value="">Violencia Comunal</option>
-                    </select>
-                  </div>
-                  <div class="denunciado">
-                    <label for="">Parentesco</label>
-                    <select name="" id="">
-                      <option value="">Padre</option>
-                      <option value="">Madre</option>
-                      <option value="">Hermano (a)</option>
-                      <option value="">Primo(a)</option>
-                      <option value="">Tío(a)</option>
-                      <option value="">Vecino(a)</option>
-                      <option value="">Pareja</option>
-                      <option value="">Ninguno</option>
-                    </select>
-                  </div>
-                  <div class="denunciado">
-                    <label for="">Otros</label>
-                    <input type="text" placeholder="Especifique">
-                  </div>
-                  <div class="denunciado" id="informacion">
-                    <h5 class="titulo-informacion">INFORMACIÓN</h5>
-                    <h6 class="parrafo-informacion">! Después de llenar los campos pulse el botón "Agregar" y si son más de 1 los denunciados, repita este proceso.</h6>
-                    
-                  </div>
-                  <div class="denunciado">
-                    <button class="agregar-denunciadocd"><img src="./img/mas.svg">Agregar</button>
-                  </div>
+                <div class="denunciado">
+                  <label for="">Apellido Materno</label>
+                  <input type="text" id="lastnamematden" placeholder="Ingrese su apellido materno"/>
                 </div>
-                <table class="tabla-denunciado">
-                  <tr class="titulos-tabla">
-                    <th>N°</th>
-                    <th>Apellido Paterno</th>
-                    <th>Apellido Materno</th>
-                    <th>Nombres</th>
-                    <th>Tipo de violencia</th>
-                    <th>Parentesco</th>
-                    <th>Opciones</th>
-                  </tr>
-                  <tr>
-                    <th>1</th>
-                  </tr>
-                </table>
-              </fieldset>
-              
-            </form>
-          </section>
-        </article>
+                <div class="denunciado">
+                  <label for="">Nombres</label>
+                  <input type="text" placeholder="Ingrese sus nombres"/>
+                </div>
+                <div class="denunciado">
+                  <label for="">Tipo de violencia</label>
+                  <select name="" id="">
+                    <option value="">Violencia Familiar</option>
+                    <option value="">Violencia de Género</option>
+                    <option value="">Violencia Escolar</option>
+                    <option value="">Violencia Laboral</option>
+                    <option value="">Violencia Animal</option>
+                    <option value="">Violencia Comunal</option>
+                  </select>
+                </div>
+                <div class="denunciado">
+                  <label for="">Parentesco</label>
+                  <select name="" id="">
+                    <option value="">Padre</option>
+                    <option value="">Madre</option>
+                    <option value="">Hermano (a)</option>
+                    <option value="">Primo(a)</option>
+                    <option value="">Tío(a)</option>
+                    <option value="">Vecino(a)</option>
+                    <option value="">Pareja</option>
+                    <option value="">Ninguno</option>
+                  </select>
+                </div>
+                <div class="denunciado">
+                  <label for="">Otros</label>
+                  <input type="text" placeholder="Especifique">
+                </div>
+                <div class="denunciado" id="informacion">
+                  <h5 class="titulo-informacion">INFORMACIÓN</h5>
+                  <h6 class="parrafo-informacion">! Después de llenar los campos pulse el botón "Agregar" y si son más de 1 los denunciados, repita este proceso.</h6>
+                  
+                </div>
+                <div class="denunciado">
+                  <button class="agregar-denunciadocd"><img src="./img/mas.svg">Agregar</button>
+                </div>
+              </div>
+              <table class="tabla-denunciado">
+                <tr class="titulos-tabla">
+                  <th>N°</th>
+                  <th>Apellido Paterno</th>
+                  <th>Apellido Materno</th>
+                  <th>Nombres</th>
+                  <th>Tipo de violencia</th>
+                  <th>Parentesco</th>
+                  <th>Opciones</th>
+                </tr>
+                <tr>
+                  <th>1</th>
+                </tr>
+              </table>
+            </fieldset>
+            
+          </form>
+        </section-->
       </section>
-      
     </main>
-    <footer></footer>
+    
     <script src="index.js" type="module"></script>
   </body>
 </html>
