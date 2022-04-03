@@ -48,7 +48,7 @@ function limpiar(){
 //*TODO - EVENTO PARA DENUNCIAR REGISTRANDO TUS DATOS */
 btnConDatos.addEventListener("click", ()=>{
   viewBienvenida.style.display="none";
-  document.querySelector(".principal").style.display="flex";
+  document.querySelector(".principal").style.display="grid";
 });
 
 // *todo EVENTO PARA EL ACORDEON
