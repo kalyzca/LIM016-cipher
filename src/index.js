@@ -127,20 +127,3 @@ document.getElementById("btn-descifrar").addEventListener("click", ()=> {
   }
 
 });
-
-
-
-//*todo EVENTO PARA CREAR LA FILA
-let btnagregar = document.querySelector(".agregar-denunciadocd");
-let tabla = document.querySelector(".tabla-denunciado");
-btnagregar.addEventListener("click", ()=>{
-  console.log("hola chicos");
-  
-  let fila = document.createElement("tr");
-  tabla.appendChild(fila);
-  let contenidotd = document.createElement("td");
-  fila.appendChild(contenidotd);
-  fila.textContent="gola"
-    
-
-});

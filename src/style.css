@@ -104,9 +104,6 @@
 }
 
 /* todo DENUNCIA REGISTRANDO DATOS*/
-.denuncia-con-datos{
-    background-color: #fff;
-}
 .titulo-denuncia-con-datos{
     grid-area: titulo;
     color: #FF17A2;
@@ -115,17 +112,6 @@
     text-align: center;
 }
 
-.register-datos{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.instrucciones{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-bottom: 1rem;
-}
 /* ACORDEON DE INSTRUCCIONES Y EXPLICACIÓN DEL CIFRADO CÉSAR */
 .acordeon{
     grid-area: instrucciones;
@@ -178,6 +164,7 @@ li::marker{
 }
 
 /* todo CAJA DE OFFSET*/
+/* Caja donde estan los elementos del offset */
 .desplazamiento{
     grid-area: desplazamiento;
     width: 16rem;
@@ -214,7 +201,7 @@ li::marker{
     width: 4.5rem;
     height: 4.5rem;
 }
-/* Caja donde estan los elementos del offset */
+
 .input-offset{
     display: flex;
     flex-direction: column;
@@ -311,92 +298,6 @@ option[value=""][disabled] {
 option {
     color:rgb(22, 21, 21);
 }
-
-/* todo parte denuncia con datos */
-.denuncia{
-    grid-area: denuncia;
-    display:none;
-}
-.registro-denuncia fieldset{
-    margin-top: 10px;
-    border-radius: 6px;
-    border: dotted 1px #FF17A2;
-    padding: 0.5rem 2rem;
-}
-.registro-denuncia input, .registro-denuncia select{
-    border: solid 1px #0000003b;
-    border-radius: 5px;
-    /* width: 200px; */
-    height: 35px;
-    text-align: center;
-}
-.datos-denunciado{
-    display: grid;
-    grid-template-columns: repeat(2,auto);
-    column-gap: 10px;
-}
-.denunciado{
-    display: flex;
-    flex-direction: column;
-}
-#informacion{
-    margin-top: 1rem;
-    border: 1px dotted #f1f50a;
-    border-radius: 6px;
-    background-color: #feffbc;
-    width:200px;
-}
-.titulo-informacion{
-    color: #ff17A2;
-    margin: 1rem 0 0 0;
-    text-align: center;
-}
-.parrafo-informacion{
-    font-family: 'Roboto Condensed Light';
-    padding: 10px;
-    text-align: center;
-}
-.agregar-denunciadocd{
-    display: inline-block;
-    margin: 30px 0;
-    width: 100px;
-    height: 30px;
-    border: 1px solid #eee;
-    color:#FF17A2;
-    border-radius: 6px;
-    background-color: white;
-    cursor: pointer;
-    padding: auto;
-    text-align: center;
-    text-decoration: none;
-    transition-duration: 0.4s;
-}
-    
-.agregar-denunciadocd:hover{ 
-    border: 1px solid #FF17A2;
-}
-table {
-    font-family: "Roboto Condensed Light";
-    border-collapse: collapse;
-    width: 95%;
-    margin-top: 30px;
-    font-size: 0.7rem;
-}
-th{
-    border:1px solid #fff;
-    padding: 8px;
-    font-weight: bold;
-}
-td {
-    padding: 8px;
-    text-align: left;
-    border:1px solid #D6EEEE;
-}
-tr:hover {
-    background-color: #FF17A2;
-    color: #fff;
-}
-
 
 /* RESPONSIVE */
 @media screen and (min-width:550px) {
