@@ -57,7 +57,8 @@ document.getElementsByClassName("titulo-instrucciones")[0].addEventListener("cli
     let panel = this.nextElementSibling;
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
-    } else {
+    }
+     else {
       panel.style.maxHeight = panel.scrollHeight + "px";
     } 
   });

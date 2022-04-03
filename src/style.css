@@ -110,6 +110,7 @@
     font-size:1rem;
     justify-self: center;
     text-align: center;
+    width: 17rem;
 }
 
 /* ACORDEON DE INSTRUCCIONES Y EXPLICACIÓN DEL CIFRADO CÉSAR */
@@ -146,7 +147,7 @@
     color: #000;
 }
 .panel {
-    padding: 0 1rem;
+    padding: 0 2rem;
     background-color:transparent;
     max-height: 0;
     overflow: hidden;
@@ -225,7 +226,7 @@ li::marker{
     justify-content: center;
     border:none;
     text-align: center;
-    padding: 1rem 0;
+    padding-top: 1rem;;
 }
 
 .botones-cif-descif pre{
@@ -253,12 +254,11 @@ li::marker{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: space-around;
     width: 16rem;
     border-radius: 6px;
     border: dotted 1px #FF17A2;
     margin:0.5rem auto;
-    padding: 1rem;
+    padding: 0.5rem 0.75rem;
 
 }
 .datos legend, .registro-denuncia legend{
@@ -328,19 +328,29 @@ option {
         height: 100vh;
     }
     .titulo-denuncia-con-datos{
-        padding: 0.75rem 0;
+        padding: 0.5rem 0;
         align-self:center;
+        margin-bottom: 0;
+        width: fit-content;
     }
     .menu{
         align-self: center;
     }
     .acordeon{
-        align-self: end;
+        align-self: flex-end;
     }
     .desplazamiento{
         align-self: end;
+        margin-bottom: 2rem;
     }
-
+    .panel{
+        max-height: max-content;
+        padding: 1rem 1.5rem;
+        border: 1px dotted #FF17A2;
+    }
+    .datos{
+        margin-bottom: 2rem;
+    }
 }
 @media screen and (min-width:768px) {
     .title{
@@ -387,9 +397,7 @@ option {
     .titulo-denuncia-con-datos{
         font-size: 1.5rem;
     }
-    .datos{
-        width: 18rem;
-    }
+   
     .principal{
         column-gap: 1.5rem;
     }
